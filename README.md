@@ -20,9 +20,15 @@ ALISA is a Proof-of-Concept (POC) system designed to transform raw system logs i
 
 1.  Clone the repository.
 2.  Install dependencies:
+
     ```bash
-    pip install -r Implementation/requirements.txt
+    # Option A: Using requirements.txt (Recommended)
+    pip install -r requirements.txt
+
+    # Option B: Manual installation
+    pip install requests pydantic pyyaml python-dotenv
     ```
+
 3.  Pull the SLM model:
     ```bash
     ollama run phi3
