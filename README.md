@@ -20,12 +20,13 @@ ALISA is a Proof-of-Concept (POC) system designed to transform raw system logs i
 
 It is recommended to run all commands from the **project root directory** (where this `README.md` is located).
 
-1.  **Clone the repository**:
-
-    ```bash
-    git clone https://github.com/Yonnnnnnnnn/ALISA---Automated-Log-Integrity-SoD-Analyzer.git
-    cd ALISA---Automated-Log-Integrity-SoD-Analyzer
-    ```
+1.  **Get the repository**:
+    - **Option 1: Using Git (Recommended)**:
+      ```bash
+      git clone https://github.com/Yonnnnnnnnn/ALISA---Automated-Log-Integrity-SoD-Analyzer.git
+      cd ALISA---Automated-Log-Integrity-SoD-Analyzer
+      ```
+    - **Option 2: Direct Download**: Download the repository as a **ZIP file** from GitHub and extract it to your desired folder.
 
 2.  **Install dependencies**:
 
