@@ -66,6 +66,39 @@ When you run the script, ALISA demonstrates three core capabilities. Here is wha
 
 ---
 
+## Part 4: Reading the Terminal Results
+
+To understand the audit findings, look at the terminal output for these indicators:
+
+### 1. The "Safety Check" (Phase 3)
+
+In the integrity check, ALISA compares two long strings of random letters and numbers (Hashes).
+
+- **SAFE**: If `Baseline Hash` and `Hash` are **identical**, it means the log is original and has NOT been touched.
+  > _Logic: Same Data = Same Hash._
+- **DANGER**: If they are **different**, it means someone has modified even just one character in the log.
+
+### 2. What an "Alert" Looks Like
+
+If ALISA finds something wrong, you will see a **CRITICAL** message. Here are two examples:
+
+**Example of Phase 2 (Conflict found):**
+
+```text
+>>> CRITICAL AUDIT FINDING: SoD VIOLATION DETECTED
+User 'u_finance_01' performed conflicting actions: Create_Invoice + Approve_Payment
+```
+
+**Example of Phase 3 (Tampering found):**
+
+```text
+>>> CRITICAL: Integrity Check Failed!
+Expected: 81895bd613...
+Got: 4e7815f79f...
+```
+
+---
+
 ## How to Verify the Results?
 
 1.  **Look in the Folder**: Go to `Implementation/data/artifacts/`. You will see JSON files. These are the "Digital Evidence" folders that an auditor would use in court.
