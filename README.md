@@ -16,18 +16,36 @@ ALISA is a Proof-of-Concept (POC) system designed to transform raw system logs i
 - Python 3.9+
 - [Ollama](https://ollama.com/) installed and running (`ollama serve`).
 
-### Setup
+### Installation Setup
 
-1.  Clone the repository.
-2.  Install dependencies:
+It is recommended to run all commands from the **project root directory** (where this `README.md` is located).
+
+1.  **Clone the repository**:
 
     ```bash
-    # Option A: Using requirements.txt (Recommended)
+    git clone https://github.com/Yonnnnnnnnn/ALISA---Automated-Log-Integrity-SoD-Analyzer.git
+    cd ALISA---Automated-Log-Integrity-SoD-Analyzer
+    ```
+
+2.  **Install dependencies**:
+
+    ```bash
+    # Option A: Automated installation (Highly Recommended)
     pip install -r requirements.txt
 
     # Option B: Manual installation
     pip install requests pydantic pyyaml python-dotenv
     ```
+
+### Dependency Breakdown
+
+| Library         | Purpose in ALISA                                                             |
+| :-------------- | :--------------------------------------------------------------------------- |
+| `requests`      | Facilitates communication with the **Ollama API** (SLM Inference Engine).    |
+| `pydantic`      | Enforces **Data Contracts** to ensure AI-parsed logs follow a strict schema. |
+| `pyyaml`        | Enables **Policy Externalization** (NIST compliance rules in `config.yaml`). |
+| `python-dotenv` | Manages environment variables and system configurations securely.            |
+| `pytest`        | Used for automated logic verification across the pipeline modules.           |
 
 3.  Pull the SLM model:
     ```bash
