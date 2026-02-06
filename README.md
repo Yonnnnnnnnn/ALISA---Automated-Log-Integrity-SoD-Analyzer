@@ -18,7 +18,7 @@ ALISA is a Proof-of-Concept (POC) system designed to transform raw system logs i
 
 ### Installation Setup
 
-It is recommended to run all commands from the **project root directory** (where this `README.md` is located).
+It is recommended to run all commands from the **project root directory** (where this `README.md`, `.gitignore`, and the `Implementation/` folder are located).
 
 1.  **Get the repository**:
     - **Option 1: Using Git (Recommended)**:
