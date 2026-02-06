@@ -1,0 +1,15 @@
+{
+  "EvidenceID": "cf824baf-170f-4bab-90db-ac37fc557c94",
+  "Timestamp": "2026-02-06T11:25:31.253192",
+  "NIST_Control": "AC-5 (Separation of Duties)",
+  "Status": "VIOLATION",
+  "SourceLog": {
+    "Raw": "Feb 06 11:25:17 finance_app system[1]: User u_finance_01 executed action: Approve_Payment ID=INV-2024-001",
+    "IntegrityVerified": true
+  },
+  "Details": {
+    "user": "u_finance_01",
+    "action": "Approve_Payment"
+  },
+  "ViolationReason": "SoD VIOLATION DETECTED (SOD_FIN_01): User 'u_finance_01' performed conflicting actions: Create_Invoice + Approve_Payment"
+}

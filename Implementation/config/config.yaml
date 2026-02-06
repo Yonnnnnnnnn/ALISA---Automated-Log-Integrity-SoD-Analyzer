@@ -1,0 +1,11 @@
+phi3_config:
+  url: "http://localhost:11434/api/generate"
+  model: "phi3"
+  timeout: 30
+
+rules:
+  nist_ac2_sod:
+    id: "SOD_FIN_01"
+    conflict_actions:
+      - ["Create_Invoice", "Approve_Payment"]
+    severity: "High"

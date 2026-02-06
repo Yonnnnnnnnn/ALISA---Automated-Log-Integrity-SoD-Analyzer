@@ -1,0 +1,31 @@
+# User requested ignores
+AI_Math_Logic.md
+API_Contract.md
+Architecture_Diagram.md
+Data_Flow_Diagram.md
+Database_Schema.md
+Flow_Chart.md
+Linter_Formatter_Config.md
+Pitch_Deck_Outline.md
+PRD.md
+System_Design.md
+Test_Strategy.md
+User_Flow.md
+Test chat
+
+# Project structure ignores
+Github Repo Sources/
+
+# Standard Python ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# Data and Artifacts (optional, but good practice for fresh starts)
+# Implementation/data/*.db
+# Implementation/data/artifacts/*.json

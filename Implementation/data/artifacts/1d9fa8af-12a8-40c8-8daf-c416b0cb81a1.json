@@ -1,0 +1,14 @@
+{
+  "EvidenceID": "1d9fa8af-12a8-40c8-8daf-c416b0cb81a1",
+  "Timestamp": "2026-02-06T11:25:31.379587",
+  "NIST_Control": "AC-5 (Separation of Duties)",
+  "Status": "VIOLATION",
+  "SourceLog": {
+    "Raw": "Feb 06 11:25:31 combo sshd(pam_unix)[12689]: accepted password; user=u_audit_01",
+    "IntegrityVerified": false
+  },
+  "Details": {
+    "Event": "Tampering Detected"
+  },
+  "ViolationReason": "Hash Mismatch - Potential Log Tampering"
+}
