@@ -62,21 +62,21 @@ cd "Implementation"
 python src/main.py
 ```
 
-## Simulation Phases
+## Audit Implementation Phases
 
-The `main.py` script runs three distinct phases:
+The `main.py` script executes three distinct audit capabilities:
 
-1.  **Phase 1: Normal Logs**
-    - Simulates standard SSH authentication logs.
-    - Verifies parsing and hashing logic.
+1.  **Phase 1: Real-Time Log Sealing**
+    - Processes standard authentication logs.
+    - Demonstrates instant integrity hashing.
 
-2.  **Phase 2: SoD Violation Simulation**
-    - Simulates a user (`u_finance_01`) creating an invoice and then approving a payment.
-    - **Expected Result**: A "CRITICAL AUDIT FINDING" is printed, and a JSON artifact is saved to `data/artifacts/`.
+2.  **Phase 2: SoD Violation Detection**
+    - Detects a user (`u_finance_01`) creating an invoice and then approving a payment.
+    - **Expected Result**: A "CRITICAL AUDIT FINDING" alert and a JSON evidence artifact.
 
-3.  **Phase 3: Tampering Simulation**
-    - Generates a log, hashes it, modifies the content, and then validates integrity.
-    - **Expected Result**: An "INTEGRITY VIOLATION DETECTED" alert and a corresponding artifact.
+3.  **Phase 3: Tampering Detection**
+    - Demonstrates detection of record modification by comparing current vs. baseline hashes.
+    - **Expected Result**: An "INTEGRITY VIOLATION DETECTED" alert and forensic artifact.
 
 ## Project Structure
 

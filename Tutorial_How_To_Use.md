@@ -32,7 +32,7 @@ Welcome! This guide will help you set up and run the **ALISA (Automated Log Inte
 
 ---
 
-## Part 2: Running the Audit Demo
+## Part 2: Running the Audit Pipeline
 
 Now, let's see ALISA in action! Type this command in your terminal:
 
@@ -44,25 +44,25 @@ python Implementation/src/main.py
 
 ## Part 3: What Just Happened? (Plain-English Analysis)
 
-When you run the script, ALISA goes through three "Phases" of testing. Here is what the computer is actually doing in each phase:
+When you run the script, ALISA demonstrates three core capabilities. Here is what the computer is actually doing in each phase:
 
-### 🟢 Phase 1: Normal Bookkeeping
+### 🟢 Phase 1: Real-Time Log Sealing
 
-- **What it does**: ALISA reads standard logs (like someone logging in successfully).
-- **The Result**: The system simply records these events. It creates a "Digital Fingerprint" (Hash) for each log.
+- **What it does**: ALISA captures standard logs (like someone logging in successfully).
+- **The Result**: The system records these events and creates a "Digital Fingerprint" (Hash) for each log.
 - **Plain English**: "Everything looks normal. I've recorded who logged in and made sure the record is sealed so it can't be changed later."
 
-### 🔴 Phase 2: Detecting "Sneaky" Behavior (SoD Violation)
+### 🔴 Phase 2: Detecting Conflict of Interest (SoD Detection)
 
-- **What it does**: ALISA watches a specific user (`u_finance_01`) perform two actions: _Creating an Invoice_ and then _Approving a Payment_.
+- **What it does**: ALISA identifies a specific user (`u_finance_01`) performing two conflicting actions: _Creating an Invoice_ and then _Approving a Payment_.
 - **The Result**: The system triggers a **CRITICAL ALERT**.
-- **Plain English**: "Hold on! The person who created the bill shouldn't be the one approving the payment. This is a conflict of interest, and I've flagged it for the auditors."
+- **Plain English**: "Hold on! The person who created the bill shouldn't be the one approving the payment. I've detected a conflict of interest and flagged it for the auditors."
 
-### 🛡️ Phase 3: Catching a "Log Hacker" (Tampering Simulation)
+### 🛡️ Phase 3: Catching Log Tampering (Integrity Verification)
 
-- **What it does**: The system creates a log entry, seals it with a fingerprint, and then **simulates a hacker** trying to change the words (e.g., changing "Failed" to "Success").
+- **What it does**: The system creates a log entry, seals it with a fingerprint, and then demonstrates how it catches someone trying to change the words (e.g., changing "Failed" to "Success").
 - **The Result**: ALISA compares the information against its original "Digital Fingerprint."
-- **Plain English**: "Someone tried to sneakily change the records! The fingerprint doesn't match the original. I've flagged this record as tampered with and untrustworthy."
+- **Plain English**: "I've detected an attempt to sneakily change the records! The fingerprint doesn't match the original. I've flagged this record as tampered with and untrustworthy."
 
 ---
 

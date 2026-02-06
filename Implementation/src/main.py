@@ -131,16 +131,16 @@ if __name__ == "__main__":
         generate_tampered_log_pair,
     )
 
-    print("\n--- Phase 1: Normal Logs ---")
+    print("\n--- Phase 1: Real-Time Log Sealing ---")
     for _ in range(3):
         run_pipeline(generate_normal_log())
 
-    print("\n--- Phase 2: SoD Violation Simulation ---")
+    print("\n--- Phase 2: SoD Violation Detection ---")
     sod_logs = generate_sod_violation_sequence()
     for log in sod_logs:
         run_pipeline(log)
 
-    print("\n--- Phase 3: Tampering Simulation ---")
+    print("\n--- Phase 3: Tampering Detection ---")
     original_log, tampered_log = generate_tampered_log_pair()
 
     # 1. Establish Baseline
